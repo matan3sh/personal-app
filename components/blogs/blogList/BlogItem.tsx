@@ -6,18 +6,18 @@ export const BlogItem = ({ blog }: any) => {
     <div className="group">
       <div className="h-80 aspect-w-1 aspect-h-1 w-full rounded-md bg-gray-200 group-hover:opacity-75 lg:aspect-none lg:h-40">
         <Link href={`/blogs/${blog.slug}`}>
-          <a>
-            <div className="relative h-80 aspect-w-1 aspect-h-1 w-full rounded-md bg-gray-200 group-hover:opacity-75 lg:aspect-none lg:h-40">
-              <Image
-                priority
-                layout="fill"
-                objectFit="cover"
-                src={blog.coverImage}
-                className="rounded-lg hover:cursor-pointer"
-                alt={""}
-              />
-            </div>
-          </a>
+
+          <div className="relative h-80 aspect-w-1 aspect-h-1 w-full rounded-md bg-gray-200 group-hover:opacity-75 lg:aspect-none lg:h-40">
+            <Image
+              priority
+              layout="fill"
+              objectFit="cover"
+              src={blog.coverImage}
+              className="rounded-lg hover:cursor-pointer"
+              alt={""}
+            />
+          </div>
+
         </Link>
       </div>
       <div className="mt-4 flex justify-between">
@@ -29,8 +29,8 @@ export const BlogItem = ({ blog }: any) => {
           <p className="mt-1 text-sm text-gray-500">{blog.description}</p>
         </div>
       </div>
-      <Link href={`/blogs/${blog.slug}`}>
-        <a className="text-sm font-bold text-gray-700">Read More</a>
+      <Link href={`/blogs/${blog.slug}`} className="text-sm font-bold text-gray-700">
+        Read More
       </Link>
     </div>
   );

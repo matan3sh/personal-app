@@ -9,16 +9,16 @@ const Home: NextPage = () => {
     <BaseLayout>
       <h2 className="text-2xl font-bold tracking-tight text-gray-900">
         Newest Blogs
-        <Link href="/blogs">
-          <a className="text-sm ml-1 text-indigo-600">(See All)</a>
+        <Link href="/blogs" className="text-sm ml-1 text-indigo-600">
+          (See All)
         </Link>
       </h2>
       <BlogList />
       <br></br>
       <h2 className="text-2xl font-bold tracking-tight text-gray-900">
         Portfolios
-        <Link href="/portfolios">
-          <a className="text-sm ml-1 text-indigo-600">(See All)</a>
+        <Link href="/portfolios" className="text-sm ml-1 text-indigo-600">
+          (See All)
         </Link>
       </h2>
       <PortfolioList />

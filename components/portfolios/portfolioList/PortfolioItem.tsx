@@ -14,10 +14,10 @@ export const PortfolioItem = ({ portfolio }: any) => {
       </div>
       <h3 className="mt-6 text-sm text-gray-500">
         <Link href={`/portfolios/${portfolio.slug}`}>
-          <a>
-            <span className="absolute inset-0" />
-            {portfolio.title}
-          </a>
+
+          <span className="absolute inset-0" />
+          {portfolio.title}
+
         </Link>
       </h3>
       <p className="text-base font-semibold text-gray-900">
