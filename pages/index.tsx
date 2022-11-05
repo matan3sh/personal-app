@@ -3,7 +3,8 @@ import Link from "next/link";
 import { BlogList } from "../components/blogs";
 import { PortfolioList } from "../components/portfolios";
 import { BaseLayout } from "../components/layouts";
-import { getDir, getFileNames } from "../lib/md";
+import { getDir, getFileNames, getItemInPath } from "../lib/md";
+import { join } from "path";
 
 const Home: NextPage = () => {
   return (
@@ -31,7 +32,10 @@ export const getStaticProps: GetStaticProps = () => {
   const blogDir = getDir("/content/blogs");
   const blogFileNames = getFileNames(blogDir);
 
-  console.log(blogFileNames);
+  blogFileNames.forEach((blogFileName) => {
+    const blogContent = getItemInPath(join(blogDir, blogFileName));
+    console.log(blogContent);
+  });
 
   return {
     props: {},
