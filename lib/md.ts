@@ -1,7 +1,7 @@
 import fs from "fs";
 import matter from "gray-matter";
 import { join } from "path";
-import { MarkdownItem } from "../interfaces/Markdown";
+import { MarkdownItem } from "@interfaces/Markdown";
 
 const getDir = (path: string): string => {
   return join(process.cwd(), path);

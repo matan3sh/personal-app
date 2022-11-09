@@ -1,6 +1,6 @@
 import { join } from "path";
-import { Blog } from "../interfaces/Blog";
-import { getAllItems, getDir, getFileNames, getItemInPath } from "./md";
+import { Blog } from "@interfaces/Blog";
+import { getAllItems, getDir, getFileNames, getItemInPath } from "@lib/md";
 
 const BLOG_DIR = getDir("/content/blogs");
 
