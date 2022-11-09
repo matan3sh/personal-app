@@ -1,12 +1,17 @@
 import Image from "next/legacy/image";
 import Link from "next/link";
+import { FunctionComponent } from "react";
+import { Blog } from "../../../interfaces/Blog";
 
-export const BlogItem = ({ blog }: any) => {
+type Props = {
+  blog: Blog;
+};
+
+export const BlogItem: FunctionComponent<Props> = ({ blog }) => {
   return (
     <div className="group">
       <div className="h-80 aspect-w-1 aspect-h-1 w-full rounded-md bg-gray-200 group-hover:opacity-75 lg:aspect-none lg:h-40">
         <Link href={`/blogs/${blog.slug}`}>
-
           <div className="relative h-80 aspect-w-1 aspect-h-1 w-full rounded-md bg-gray-200 group-hover:opacity-75 lg:aspect-none lg:h-40">
             <Image
               priority
@@ -17,7 +22,6 @@ export const BlogItem = ({ blog }: any) => {
               alt={""}
             />
           </div>
-
         </Link>
       </div>
       <div className="mt-4 flex justify-between">
@@ -29,7 +33,10 @@ export const BlogItem = ({ blog }: any) => {
           <p className="mt-1 text-sm text-gray-500">{blog.description}</p>
         </div>
       </div>
-      <Link href={`/blogs/${blog.slug}`} className="text-sm font-bold text-gray-700">
+      <Link
+        href={`/blogs/${blog.slug}`}
+        className="text-sm font-bold text-gray-700"
+      >
         Read More
       </Link>
     </div>
