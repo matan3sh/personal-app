@@ -4,11 +4,11 @@ import { getAllItems, getDir, getFileNames, getItemInPath } from "@lib/md";
 
 const BLOG_DIR = getDir("/content/blogs");
 
-const getBlogFileNames = () => {
+const getBlogFileNames = (): string[] => {
   return getFileNames(BLOG_DIR);
 };
 
-const getBlogsSlugs = () => {
+const getBlogsSlugs = (): string[] => {
   return getBlogFileNames().map((fileName) => fileName.replace(/\.md$/, ""));
 };
 
@@ -18,7 +18,7 @@ const getBlog = (fileName: string): Blog => {
   return blog;
 };
 
-const getBlogBySlug = (slug: string) => {
+const getBlogBySlug = (slug: string): Blog => {
   const fileName = slug + ".md";
   return getBlog(fileName);
 };
