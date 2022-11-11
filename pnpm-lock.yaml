@@ -3,6 +3,7 @@ lockfileVersion: 5.4
 specifiers:
   '@headlessui/react': ^1.7.3
   '@heroicons/react': ^2.0.12
+  '@tailwindcss/typography': ^0.5.8
   '@types/node': 18.11.8
   '@types/react': 18.0.24
   '@types/react-dom': 18.0.8
@@ -34,6 +35,7 @@ dependencies:
   typescript: 4.8.4
 
 devDependencies:
+  '@tailwindcss/typography': 0.5.8_tailwindcss@3.2.1
   autoprefixer: 10.4.13_postcss@8.4.18
   postcss: 8.4.18
   tailwindcss: 3.2.1_postcss@8.4.18
@@ -206,6 +208,18 @@ packages:
     dependencies:
       tslib: 2.4.1
     dev: false
+
+  /@tailwindcss/typography/0.5.8_tailwindcss@3.2.1:
+    resolution: {integrity: sha512-xGQEp8KXN8Sd8m6R4xYmwxghmswrd0cPnNI2Lc6fmrC3OojysTBJJGSIVwPV56q4t6THFUK3HJ0EaWwpglSxWw==}
+    peerDependencies:
+      tailwindcss: '>=3.0.0 || insiders'
+    dependencies:
+      lodash.castarray: 4.4.0
+      lodash.isplainobject: 4.0.6
+      lodash.merge: 4.6.2
+      postcss-selector-parser: 6.0.10
+      tailwindcss: 3.2.1_postcss@8.4.18
+    dev: true
 
   /@types/debug/4.1.7:
     resolution: {integrity: sha512-9AonUzyTjXXhEOa0DnqpzZi6VHlqKMswga9EXjpXnnqxwLtdvPPtlO8evrI5D9S6asFRCQ6v+wpiUKbw+vKqyg==}
@@ -658,6 +672,18 @@ packages:
   /lilconfig/2.0.6:
     resolution: {integrity: sha512-9JROoBW7pobfsx+Sq2JsASvCo6Pfo6WWoUW79HuB1BCoBXD4PLWJPqDF6fNj67pqBYTbAHkE57M1kS/+L1neOg==}
     engines: {node: '>=10'}
+    dev: true
+
+  /lodash.castarray/4.4.0:
+    resolution: {integrity: sha512-aVx8ztPv7/2ULbArGJ2Y42bG1mEQ5mGjpdvrbJcJFU3TbYybe+QlLS4pst9zV52ymy2in1KpFPiZnAOATxD4+Q==}
+    dev: true
+
+  /lodash.isplainobject/4.0.6:
+    resolution: {integrity: sha512-oSXzaWypCMHkPC3NvBEaPHf0KsA5mvPrOPgQWDsbg8n7orZ290M0BmC/jgRZ4vcJ6DTAhjrsSYgdsW/F+MFOBA==}
+    dev: true
+
+  /lodash.merge/4.6.2:
+    resolution: {integrity: sha512-0KpjqXRVvrYyCsX1swR/XTK0va6VQkQM6MNo7PqW77ByjAhoARA8EfrP1N4+KlKj8YS0ZUCtRT/YUuhyYDujIQ==}
     dev: true
 
   /longest-streak/3.0.1:
