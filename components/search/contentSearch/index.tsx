@@ -21,31 +21,33 @@ const ContentSearch = () => {
           placeholder="Search for anything"
         />
       </div>
-      <ul
-        className="w-80 border-solid border rounded-md z-10 bg-white max-h-80 overflow-auto absolute select is-multiple"
-        role="listbox"
-      >
-        <li
-          onClick={() => {}}
-          className={`hover:bg-indigo-600 hover:text-white p-3 relative cursor-pointer`}
+      {false && (
+        <ul
+          className="w-80 border-solid border rounded-md z-10 bg-white max-h-80 overflow-auto absolute select is-multiple"
+          role="listbox"
         >
-          <div className="font-bold text-sm truncate">Found Blog Title 1</div>
-          <p className="truncate text-sm">Found Blog Desc 1</p>
-          <span className="mt-2 text-xs text-white bg-gray-800 px-2 py-1 rounded-xl">
-            blogs
-          </span>
-        </li>
-        <li
-          onClick={() => {}}
-          className={`hover:bg-indigo-600 hover:text-white p-3 relative cursor-pointer`}
-        >
-          <div className="font-bold text-sm truncate">Found Blog Title 2</div>
-          <p className="truncate text-sm">Found Blog Desc 2</p>
-          <span className="mt-2 text-xs text-white bg-gray-800 px-2 py-1 rounded-xl">
-            portfolios
-          </span>
-        </li>
-      </ul>
+          <li
+            onClick={() => {}}
+            className={`hover:bg-indigo-600 hover:text-white p-3 relative cursor-pointer`}
+          >
+            <div className="font-bold text-sm truncate">Found Blog Title 1</div>
+            <p className="truncate text-sm">Found Blog Desc 1</p>
+            <span className="mt-2 text-xs text-white bg-gray-800 px-2 py-1 rounded-xl">
+              blogs
+            </span>
+          </li>
+          <li
+            onClick={() => {}}
+            className={`hover:bg-indigo-600 hover:text-white p-3 relative cursor-pointer`}
+          >
+            <div className="font-bold text-sm truncate">Found Blog Title 2</div>
+            <p className="truncate text-sm">Found Blog Desc 2</p>
+            <span className="mt-2 text-xs text-white bg-gray-800 px-2 py-1 rounded-xl">
+              portfolios
+            </span>
+          </li>
+        </ul>
+      )}
     </>
   );
 };
