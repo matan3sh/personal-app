@@ -1,10 +1,11 @@
 import fs from "fs";
 import matter from "gray-matter";
 import { join } from "path";
-import { MarkdownItem } from "@interfaces/Markdown";
+import { MarkdownItem, SearchContent } from "@interfaces/Markdown";
 import { remark } from "remark";
 import html from "remark-html";
 import remarkGfm from "remark-gfm";
+import { Blog } from "@interfaces/Blog";
 
 const getDir = (path: string): string => {
   return join(process.cwd(), path);
@@ -33,4 +34,29 @@ const markdownToHtml = async (markdown: string) => {
   return result.toString();
 };
 
-export { getDir, getFileNames, getItemInPath, getAllItems, markdownToHtml };
+const saveSearchData = (blogs: Blog[]) => {
+  const searchFile = getDir("/content/search/index.json");
+  const searchItemList: SearchContent[] = [];
+
+  blogs.forEach((blog) => {
+    const searchItem = {
+      slug: blog.slug,
+      title: blog.title,
+      description: blog.description,
+      category: "blog",
+    } as SearchContent;
+
+    searchItemList.push(searchItem);
+  });
+
+  fs.writeFileSync(searchFile, JSON.stringify(searchItemList, null, 2));
+};
+
+export {
+  getDir,
+  getFileNames,
+  getItemInPath,
+  getAllItems,
+  markdownToHtml,
+  saveSearchData,
+};
