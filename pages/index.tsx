@@ -6,6 +6,7 @@ import { BaseLayout } from "@components/layouts";
 import { getBlogs } from "@lib/blogs";
 import { Blog } from "@interfaces/Blog";
 import { saveSearchData } from "@lib/md";
+import { getPortfolios } from "@lib/portfolios";
 
 type Props = {
   blogs: Blog[];
@@ -35,6 +36,9 @@ const Home: NextPage<Props> = ({ blogs }) => {
 
 export const getStaticProps: GetStaticProps = () => {
   const blogs = getBlogs();
+  const portfolios = getPortfolios();
+
+  console.log(portfolios);
 
   saveSearchData(blogs);
 
