@@ -1,6 +1,6 @@
-import searchIndex from "@content/search/index.json";
 import { SearchContent } from "@interfaces/Markdown";
 import * as JsSearch from "js-search";
+import { getLocalSearchIndex } from "./utils";
 
 class ContentIndexer {
   private static instance: ContentIndexer;
@@ -18,7 +18,7 @@ class ContentIndexer {
     this.searchEngine = new JsSearch.Search("slug");
     this.searchEngine.addIndex("title");
     this.searchEngine.addIndex("description");
-    this.searchEngine.addDocuments(searchIndex);
+    this.searchEngine.addDocuments(getLocalSearchIndex());
   }
 
   public search(query: string): SearchContent[] {
